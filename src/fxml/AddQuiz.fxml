@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="896.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddQuizController">
+   <children>
+      <SplitPane dividerPositions="0.25" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <FlowPane alignment="CENTER">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add a new Quiz" textAlignment="CENTER" wrappingWidth="343.412109375">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </FlowPane>
+                        <Separator prefWidth="200.0" />
+                        <FlowPane alignment="CENTER">
+                           <children>
+                              <JFXTextField fx:id="quiztitle" labelFloat="true" promptText="Enter Quiz Title">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </FlowPane.margin>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </JFXTextField>
+                              <JFXButton fx:id="setquiztitlebutton" onAction="#setquiztitle" style="-fx-background-color: #7B8788;" text="OK">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </FlowPane.margin>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </FlowPane>
+                        <Separator prefWidth="200.0" />
+                        <JFXTextArea fx:id="question" labelFloat="true" prefHeight="74.0" prefWidth="795.0" promptText="Enter Question">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="50.0" right="50.0" top="20.0" />
+                           </VBox.margin>
+                        </JFXTextArea>
+                        <JFXTextField fx:id="option1" labelFloat="true" promptText="Option 1">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="option2" labelFloat="true" promptText="Option 2">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="option3" labelFloat="true" promptText="Option 3">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="option4" labelFloat="true" promptText="Option 4">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select a right answer" textAlignment="CENTER" wrappingWidth="250.61215209960938">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" top="20.0" />
+                           </VBox.margin>
+                        </Text>
+                        <FlowPane alignment="CENTER">
+                           <children>
+                              <JFXRadioButton fx:id="option1radio" contentDisplay="CENTER" text="Option 1">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <FlowPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </FlowPane.margin>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="option2radio" contentDisplay="CENTER" text="Option 2">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <FlowPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </FlowPane.margin>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="option3radio" contentDisplay="CENTER" text="Option 3">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <FlowPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </FlowPane.margin>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="option4radio" contentDisplay="CENTER" text="Option 4">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <FlowPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </FlowPane.margin>
+                              </JFXRadioButton>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER">
+                           <children>
+                              <JFXButton fx:id="addnextquestion" onAction="#addnextquestion" style="-fx-background-color: #192A56;" text="Add Next Question" textFill="#ede5e5">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </FlowPane.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="submitquiz" onAction="#submitquiz" style="-fx-background-color: #45CE30;" text="Submit Quiz" textFill="#f2ecec">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </FlowPane.margin>
+                              </JFXButton>
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="649.0" prefWidth="354.0">
+               <children>
+                  <JFXTreeView fx:id="treeview" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
